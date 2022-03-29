@@ -137,6 +137,21 @@ namespace Jin_s_4k_keypad_configurator
         {
             consoleOutput2.Clear();
         }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages["Console"];
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages["Configurator"];
+        }
     }
 }
 
