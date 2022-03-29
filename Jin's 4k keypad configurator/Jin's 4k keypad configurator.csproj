@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Jin_s_4k_keypad_configurator.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,16 +88,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg111.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bg1111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg11111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg11112.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instruction.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

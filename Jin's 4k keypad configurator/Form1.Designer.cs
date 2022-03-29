@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.consoleInput = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.Console = new System.Windows.Forms.TabPage();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnclear2 = new System.Windows.Forms.Button();
             this.consoleOutput2 = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Configurator = new System.Windows.Forms.TabPage();
-            this.textboxKey4 = new System.Windows.Forms.RichTextBox();
-            this.textboxKey3 = new System.Windows.Forms.RichTextBox();
-            this.textboxKey2 = new System.Windows.Forms.RichTextBox();
-            this.textboxKey1 = new System.Windows.Forms.RichTextBox();
+            this.textboxKey4 = new System.Windows.Forms.TextBox();
+            this.textboxKey2 = new System.Windows.Forms.TextBox();
+            this.textboxKey3 = new System.Windows.Forms.TextBox();
+            this.textboxKey1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnConsole = new System.Windows.Forms.Button();
             this.cboPort = new System.Windows.Forms.ComboBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,9 +58,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnflash = new System.Windows.Forms.Button();
-            this.btnConsole = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Console.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Configurator.SuspendLayout();
@@ -99,9 +102,20 @@
             this.Console.Location = new System.Drawing.Point(4, 22);
             this.Console.Name = "Console";
             this.Console.Padding = new System.Windows.Forms.Padding(3);
-            this.Console.Size = new System.Drawing.Size(560, 438);
+            this.Console.Size = new System.Drawing.Size(560, 430);
             this.Console.TabIndex = 1;
             this.Console.Text = "Console";
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(6, 392);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(62, 22);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnclear2
             // 
@@ -142,14 +156,16 @@
             // Configurator
             // 
             this.Configurator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.Configurator.BackgroundImage = global::Jin_s_4k_keypad_configurator.Properties.Resources.bg1111;
+            this.Configurator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Configurator.BackgroundImage")));
             this.Configurator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Configurator.Controls.Add(this.label5);
+            this.Configurator.Controls.Add(this.label4);
+            this.Configurator.Controls.Add(this.textboxKey4);
+            this.Configurator.Controls.Add(this.textboxKey2);
+            this.Configurator.Controls.Add(this.textboxKey3);
+            this.Configurator.Controls.Add(this.textboxKey1);
             this.Configurator.Controls.Add(this.label3);
             this.Configurator.Controls.Add(this.btnConsole);
-            this.Configurator.Controls.Add(this.textboxKey4);
-            this.Configurator.Controls.Add(this.textboxKey3);
-            this.Configurator.Controls.Add(this.textboxKey2);
-            this.Configurator.Controls.Add(this.textboxKey1);
             this.Configurator.Controls.Add(this.cboPort);
             this.Configurator.Controls.Add(this.buttonClear);
             this.Configurator.Controls.Add(this.label2);
@@ -174,38 +190,68 @@
             // textboxKey4
             // 
             this.textboxKey4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey4.Location = new System.Drawing.Point(459, 187);
+            this.textboxKey4.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey4.Location = new System.Drawing.Point(460, 185);
+            this.textboxKey4.MaxLength = 3;
             this.textboxKey4.Name = "textboxKey4";
-            this.textboxKey4.Size = new System.Drawing.Size(59, 59);
-            this.textboxKey4.TabIndex = 21;
-            this.textboxKey4.Text = "";
-            // 
-            // textboxKey3
-            // 
-            this.textboxKey3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey3.Location = new System.Drawing.Point(355, 187);
-            this.textboxKey3.Name = "textboxKey3";
-            this.textboxKey3.Size = new System.Drawing.Size(59, 59);
-            this.textboxKey3.TabIndex = 20;
-            this.textboxKey3.Text = "";
+            this.textboxKey4.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey4.TabIndex = 27;
+            this.textboxKey4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textboxKey2
             // 
             this.textboxKey2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey2.Location = new System.Drawing.Point(194, 187);
+            this.textboxKey2.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey2.Location = new System.Drawing.Point(193, 186);
+            this.textboxKey2.MaxLength = 3;
             this.textboxKey2.Name = "textboxKey2";
-            this.textboxKey2.Size = new System.Drawing.Size(59, 59);
-            this.textboxKey2.TabIndex = 19;
-            this.textboxKey2.Text = "";
+            this.textboxKey2.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey2.TabIndex = 26;
+            this.textboxKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textboxKey3
+            // 
+            this.textboxKey3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textboxKey3.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey3.Location = new System.Drawing.Point(356, 186);
+            this.textboxKey3.MaxLength = 3;
+            this.textboxKey3.Name = "textboxKey3";
+            this.textboxKey3.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey3.TabIndex = 25;
+            this.textboxKey3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textboxKey1
             // 
             this.textboxKey1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey1.Location = new System.Drawing.Point(89, 186);
+            this.textboxKey1.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey1.Location = new System.Drawing.Point(90, 186);
+            this.textboxKey1.MaxLength = 3;
             this.textboxKey1.Name = "textboxKey1";
-            this.textboxKey1.Size = new System.Drawing.Size(59, 59);
-            this.textboxKey1.TabIndex = 18;
-            this.textboxKey1.Text = "";
+            this.textboxKey1.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey1.TabIndex = 24;
+            this.textboxKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(359, 413);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 14);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Jin\'s 4K keypad Configurator Ver 0.11";
+            // 
+            // btnConsole
+            // 
+            this.btnConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsole.Location = new System.Drawing.Point(467, 121);
+            this.btnConsole.Name = "btnConsole";
+            this.btnConsole.Size = new System.Drawing.Size(86, 22);
+            this.btnConsole.TabIndex = 22;
+            this.btnConsole.Text = "Console";
+            this.btnConsole.UseVisualStyleBackColor = true;
+            this.btnConsole.Click += new System.EventHandler(this.button1_Click);
             // 
             // cboPort
             // 
@@ -223,6 +269,7 @@
             // 
             // buttonClear
             // 
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.Location = new System.Drawing.Point(306, 356);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(59, 55);
@@ -234,6 +281,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(52, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
@@ -289,6 +337,7 @@
             // lableOutput
             // 
             this.lableOutput.AutoSize = true;
+            this.lableOutput.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lableOutput.Location = new System.Drawing.Point(52, 291);
             this.lableOutput.Name = "lableOutput";
             this.lableOutput.Size = new System.Drawing.Size(51, 13);
@@ -306,6 +355,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(467, 93);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(86, 22);
@@ -316,6 +366,7 @@
             // 
             // btnOpen
             // 
+            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.Location = new System.Drawing.Point(468, 65);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(86, 22);
@@ -335,37 +386,27 @@
             this.btnflash.UseVisualStyleBackColor = true;
             this.btnflash.Click += new System.EventHandler(this.btnflash_Click);
             // 
-            // btnConsole
+            // label4
             // 
-            this.btnConsole.Location = new System.Drawing.Point(467, 121);
-            this.btnConsole.Name = "btnConsole";
-            this.btnConsole.Size = new System.Drawing.Size(86, 22);
-            this.btnConsole.TabIndex = 22;
-            this.btnConsole.Text = "Console";
-            this.btnConsole.UseVisualStyleBackColor = true;
-            this.btnConsole.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(6, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(434, 16);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "For special keys, please use console instead, type 0 in console to begin";
             // 
-            // btnBack
+            // label5
             // 
-            this.btnBack.BackColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(6, 392);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(62, 22);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(359, 413);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 14);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Jin\'s 4K keypad Configurator Ver 0.10";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(6, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(426, 112);
+            this.label5.TabIndex = 29;
+            this.label5.Text = resources.GetString("label5.Text");
             // 
             // Form1
             // 
@@ -376,6 +417,7 @@
             this.ClientSize = new System.Drawing.Size(558, 428);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -413,13 +455,15 @@
         private System.Windows.Forms.TabPage Configurator;
         private System.Windows.Forms.RichTextBox consoleOutput2;
         private System.Windows.Forms.Button btnclear2;
-        private System.Windows.Forms.RichTextBox textboxKey1;
-        private System.Windows.Forms.RichTextBox textboxKey4;
-        private System.Windows.Forms.RichTextBox textboxKey3;
-        private System.Windows.Forms.RichTextBox textboxKey2;
         private System.Windows.Forms.Button btnConsole;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textboxKey1;
+        private System.Windows.Forms.TextBox textboxKey4;
+        private System.Windows.Forms.TextBox textboxKey2;
+        private System.Windows.Forms.TextBox textboxKey3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

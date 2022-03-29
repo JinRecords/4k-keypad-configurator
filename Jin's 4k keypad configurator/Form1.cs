@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Windows.Forms;
-using System.ComponentModel;
 
 namespace Jin_s_4k_keypad_configurator
 {
     public partial class Form1 : Form
-    { private string in_data;
+    {
+        private string in_data;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +20,13 @@ namespace Jin_s_4k_keypad_configurator
             cboPort.Items.AddRange(ports);
             cboPort.SelectedIndex = 0;
             btnClose.Enabled = false;
-            
+            textboxKey1.Enabled = false;
+            textboxKey2.Enabled = false;
+            textboxKey3.Enabled = false;
+            textboxKey4.Enabled = false;
+
+
+
 
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,7 +43,13 @@ namespace Jin_s_4k_keypad_configurator
                 //Open port
                 serialPort1.PortName = cboPort.Text;
                 serialPort1.Open();
+                textboxKey1.Enabled = true;
+                textboxKey2.Enabled = true;
+                textboxKey3.Enabled = true;
+                textboxKey4.Enabled = true;
+
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,41 +74,50 @@ namespace Jin_s_4k_keypad_configurator
         {
             textboxTest.Clear();
         }
+
         private void btnflash_Click(object sender, EventArgs e)
         {
             {
                 try
                 {
                     if (serialPort1.IsOpen)
+                    {
+
 
                         //send data to keypad
                         serialPort1.Write("0");
-                    new System.Threading.ManualResetEvent(false).WaitOne(800);
-                    progressBar1.Value = 500;
-                    serialPort1.Write(textboxKey1.Text);
-                    textboxKey1.Clear();
-                    new System.Threading.ManualResetEvent(false).WaitOne(1300);
-                    progressBar1.Value = 1000;
-                    serialPort1.Write(textboxKey2.Text);
-                    textboxKey2.Clear();
-                    new System.Threading.ManualResetEvent(false).WaitOne(1300);
-                    progressBar1.Value = 1500;
-                    serialPort1.Write(textboxKey3.Text);
-                    textboxKey3.Clear();
-                    new System.Threading.ManualResetEvent(false).WaitOne(1300);
-                    serialPort1.Write(textboxKey4.Text);
-                    textboxKey4.Clear();
-                    progressBar1.Value = 2000;
+                        new System.Threading.ManualResetEvent(false).WaitOne(800);
+                        progressBar1.Value = 17;
+                        serialPort1.Write(textboxKey1.Text);
+                        new System.Threading.ManualResetEvent(false).WaitOne(1300);
+                        progressBar1.Value = 45;
+                        serialPort1.Write(textboxKey2.Text);
+                        new System.Threading.ManualResetEvent(false).WaitOne(1300);
+                        progressBar1.Value = 73;
+                        serialPort1.Write(textboxKey3.Text);
+                        new System.Threading.ManualResetEvent(false).WaitOne(1300);
+                        serialPort1.Write(textboxKey4.Text);
+                        progressBar1.Value = 100;
+                        textboxKey1.Clear();
+                        textboxKey2.Clear();
+                        textboxKey3.Clear();
+                        textboxKey4.Clear();
+
+                    }
 
                 }
+
+
                 catch (Exception)
                 {
                     progressBar1.Value = 0;
                     MessageBox.Show("Conection is closed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+                textboxKey1.Clear();
+
             }
-        }       
+        }
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
 
@@ -140,7 +161,7 @@ namespace Jin_s_4k_keypad_configurator
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -152,6 +173,8 @@ namespace Jin_s_4k_keypad_configurator
         {
             tabControl1.SelectedTab = tabControl1.TabPages["Configurator"];
         }
+
+        
     }
 }
 

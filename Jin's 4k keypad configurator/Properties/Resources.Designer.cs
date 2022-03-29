@@ -63,39 +63,19 @@ namespace Jin_s_4k_keypad_configurator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bg1 {
-            get {
-                object obj = ResourceManager.GetObject("bg1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bg11 {
-            get {
-                object obj = ResourceManager.GetObject("bg11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bg111 {
-            get {
-                object obj = ResourceManager.GetObject("bg111", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bg1111 {
             get {
                 object obj = ResourceManager.GetObject("bg1111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap instruction {
+            get {
+                object obj = ResourceManager.GetObject("instruction", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
