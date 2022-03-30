@@ -728,7 +728,7 @@
     <value>- Select device (look up in Control &gt; Hardware and Sound 
 &gt; Devices and Printers &gt; 4K Keypad &gt; properties &gt; Hardware &gt; COM??)
 - Click "Connect"
-- Enter Keys (use "xx" to disable key(s))
+- Enter Keys
 - Click 'Flash!"
 
 Note: Do NOT unplug device during flashing
