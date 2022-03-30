@@ -39,6 +39,8 @@
             this.consoleOutput2 = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Configurator = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textboxKey4 = new System.Windows.Forms.TextBox();
             this.textboxKey2 = new System.Windows.Forms.TextBox();
             this.textboxKey3 = new System.Windows.Forms.TextBox();
@@ -46,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnConsole = new System.Windows.Forms.Button();
             this.cboPort = new System.Windows.Forms.ComboBox();
-            this.buttonClear = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textboxTest = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -58,8 +60,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnflash = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.Console.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Configurator.SuspendLayout();
@@ -83,6 +84,7 @@
             // btnSend
             // 
             this.btnSend.BackColor = System.Drawing.Color.White;
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSend.Location = new System.Drawing.Point(482, 392);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(72, 22);
@@ -102,13 +104,14 @@
             this.Console.Location = new System.Drawing.Point(4, 22);
             this.Console.Name = "Console";
             this.Console.Padding = new System.Windows.Forms.Padding(3);
-            this.Console.Size = new System.Drawing.Size(560, 430);
+            this.Console.Size = new System.Drawing.Size(560, 403);
             this.Console.TabIndex = 1;
             this.Console.Text = "Console";
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Location = new System.Drawing.Point(6, 392);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(62, 22);
@@ -120,6 +123,7 @@
             // btnclear2
             // 
             this.btnclear2.BackColor = System.Drawing.Color.White;
+            this.btnclear2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnclear2.Location = new System.Drawing.Point(72, 392);
             this.btnclear2.Name = "btnclear2";
             this.btnclear2.Size = new System.Drawing.Size(62, 22);
@@ -132,6 +136,7 @@
             // 
             this.consoleOutput2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.consoleOutput2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.consoleOutput2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.consoleOutput2.ForeColor = System.Drawing.SystemColors.Info;
             this.consoleOutput2.Location = new System.Drawing.Point(6, 6);
             this.consoleOutput2.Name = "consoleOutput2";
@@ -145,19 +150,19 @@
             this.tabControl1.Controls.Add(this.Configurator);
             this.tabControl1.Controls.Add(this.Console);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Location = new System.Drawing.Point(-5, -23);
+            this.tabControl1.Location = new System.Drawing.Point(-5, -24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(568, 456);
+            this.tabControl1.Size = new System.Drawing.Size(568, 457);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 1;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             // 
             // Configurator
             // 
             this.Configurator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.Configurator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Configurator.BackgroundImage")));
             this.Configurator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Configurator.Controls.Add(this.label6);
             this.Configurator.Controls.Add(this.label5);
             this.Configurator.Controls.Add(this.label4);
             this.Configurator.Controls.Add(this.textboxKey4);
@@ -167,7 +172,7 @@
             this.Configurator.Controls.Add(this.label3);
             this.Configurator.Controls.Add(this.btnConsole);
             this.Configurator.Controls.Add(this.cboPort);
-            this.Configurator.Controls.Add(this.buttonClear);
+            this.Configurator.Controls.Add(this.btnClear);
             this.Configurator.Controls.Add(this.label2);
             this.Configurator.Controls.Add(this.textboxTest);
             this.Configurator.Controls.Add(this.progressBar1);
@@ -183,53 +188,88 @@
             this.Configurator.Location = new System.Drawing.Point(4, 22);
             this.Configurator.Name = "Configurator";
             this.Configurator.Padding = new System.Windows.Forms.Padding(3);
-            this.Configurator.Size = new System.Drawing.Size(560, 430);
+            this.Configurator.Size = new System.Drawing.Size(560, 431);
             this.Configurator.TabIndex = 0;
             this.Configurator.Text = "Configurator";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(6, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(426, 112);
+            this.label5.TabIndex = 29;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(6, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(434, 16);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "For special keys, please use console instead, type 0 in console to begin";
+            // 
             // textboxKey4
             // 
+            this.textboxKey4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textboxKey4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey4.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey4.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textboxKey4.Location = new System.Drawing.Point(460, 185);
             this.textboxKey4.MaxLength = 3;
+            this.textboxKey4.Multiline = true;
             this.textboxKey4.Name = "textboxKey4";
-            this.textboxKey4.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey4.Size = new System.Drawing.Size(59, 61);
             this.textboxKey4.TabIndex = 27;
             this.textboxKey4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxKey4.TextChanged += new System.EventHandler(this.textboxKey4_TextChanged);
             // 
             // textboxKey2
             // 
             this.textboxKey2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey2.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey2.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxKey2.Location = new System.Drawing.Point(193, 186);
             this.textboxKey2.MaxLength = 3;
+            this.textboxKey2.Multiline = true;
             this.textboxKey2.Name = "textboxKey2";
-            this.textboxKey2.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey2.Size = new System.Drawing.Size(59, 59);
             this.textboxKey2.TabIndex = 26;
             this.textboxKey2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxKey2.TextChanged += new System.EventHandler(this.textboxKey2_TextChanged);
             // 
             // textboxKey3
             // 
             this.textboxKey3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey3.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey3.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxKey3.Location = new System.Drawing.Point(356, 186);
             this.textboxKey3.MaxLength = 3;
+            this.textboxKey3.Multiline = true;
             this.textboxKey3.Name = "textboxKey3";
-            this.textboxKey3.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey3.Size = new System.Drawing.Size(59, 59);
             this.textboxKey3.TabIndex = 25;
             this.textboxKey3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxKey3.TextChanged += new System.EventHandler(this.textboxKey3_TextChanged);
             // 
             // textboxKey1
             // 
             this.textboxKey1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textboxKey1.Font = new System.Drawing.Font("Cascadia Code", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxKey1.Font = new System.Drawing.Font("Cascadia Code", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxKey1.Location = new System.Drawing.Point(90, 186);
             this.textboxKey1.MaxLength = 3;
+            this.textboxKey1.MinimumSize = new System.Drawing.Size(59, 59);
+            this.textboxKey1.Multiline = true;
             this.textboxKey1.Name = "textboxKey1";
-            this.textboxKey1.Size = new System.Drawing.Size(59, 60);
+            this.textboxKey1.Size = new System.Drawing.Size(59, 59);
             this.textboxKey1.TabIndex = 24;
             this.textboxKey1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxKey1.TextChanged += new System.EventHandler(this.textboxKey1_TextChanged);
             // 
             // label3
             // 
@@ -240,10 +280,11 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 14);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Jin\'s 4K keypad Configurator Ver 0.11";
+            this.label3.Text = "Jin\'s 4K keypad Configurator Ver 0.12\r\n";
             // 
             // btnConsole
             // 
+            this.btnConsole.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsole.Location = new System.Drawing.Point(467, 121);
             this.btnConsole.Name = "btnConsole";
@@ -267,16 +308,18 @@
             this.cboPort.Size = new System.Drawing.Size(85, 21);
             this.cboPort.TabIndex = 15;
             // 
-            // buttonClear
+            // btnClear
             // 
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.Location = new System.Drawing.Point(306, 356);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(59, 55);
-            this.buttonClear.TabIndex = 17;
-            this.buttonClear.Text = "Clear";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(306, 356);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(59, 55);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.btnClear.MouseEnter += new System.EventHandler(this.buttonClear_MouseEnter);
+            this.btnClear.MouseLeave += new System.EventHandler(this.btnClear_MouseLeave);
             // 
             // label2
             // 
@@ -299,9 +342,9 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(55, 308);
-            this.progressBar1.Maximum = 2000;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(498, 24);
+            this.progressBar1.Step = 1;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 14;
             // 
@@ -355,6 +398,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(467, 93);
             this.btnClose.Name = "btnClose";
@@ -366,6 +410,7 @@
             // 
             // btnOpen
             // 
+            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.Location = new System.Drawing.Point(468, 65);
             this.btnOpen.Name = "btnOpen";
@@ -377,36 +422,29 @@
             // 
             // btnflash
             // 
+            this.btnflash.BackColor = System.Drawing.Color.White;
+            this.btnflash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnflash.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnflash.Location = new System.Drawing.Point(370, 356);
             this.btnflash.Name = "btnflash";
             this.btnflash.Size = new System.Drawing.Size(183, 55);
             this.btnflash.TabIndex = 0;
             this.btnflash.Text = "Flash!";
-            this.btnflash.UseVisualStyleBackColor = true;
+            this.btnflash.UseVisualStyleBackColor = false;
             this.btnflash.Click += new System.EventHandler(this.btnflash_Click);
+            this.btnflash.MouseEnter += new System.EventHandler(this.btnflash_Enter);
+            this.btnflash.MouseLeave += new System.EventHandler(this.btnflash_Leave);
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(6, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(434, 16);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "For special keys, please use console instead, type 0 in console to begin";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(6, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(426, 112);
-            this.label5.TabIndex = 29;
-            this.label5.Text = resources.GetString("label5.Text");
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(3, 413);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 14);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "github.com/JinRecords";
             // 
             // Form1
             // 
@@ -414,7 +452,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(558, 428);
+            this.ClientSize = new System.Drawing.Size(558, 426);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -422,6 +460,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.Form1_Load);
+            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Console.ResumeLayout(false);
             this.Console.PerformLayout();
@@ -437,7 +476,7 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TextBox consoleInput;
         private System.Windows.Forms.ComboBox cboPort;
-        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox textboxTest;
         private System.Windows.Forms.ProgressBar progressBar1;
@@ -464,6 +503,7 @@
         private System.Windows.Forms.TextBox textboxKey3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }
 
