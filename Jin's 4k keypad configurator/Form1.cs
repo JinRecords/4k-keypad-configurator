@@ -16,8 +16,12 @@ namespace Jin_s_4k_keypad_configurator
         {
             //Get all ports
             string[] ports = SerialPort.GetPortNames();
-            cboPort.Items.AddRange(ports);
-            cboPort.SelectedIndex = -1  ;
+            if (ports == null || ports.Length == 0)
+            {
+                MessageBox.Show("Please connect the keypad to your device!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                cboPort.Items.AddRange(ports);
+            cboPort.SelectedIndex = 0 ;
             btnClose.Enabled = false;
             textboxKey1.Enabled = false;
             textboxKey2.Enabled = false;
@@ -66,9 +70,13 @@ namespace Jin_s_4k_keypad_configurator
                 textboxKey4.Enabled = true;
                 btnflash.Enabled = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please choose the device!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnOpen.Enabled = true;
+                btnClose.Enabled = false;
+                cboPort.Enabled = true;
             }
         }
         private void btnClose_Click_1(object sender, EventArgs e)
@@ -89,6 +97,8 @@ namespace Jin_s_4k_keypad_configurator
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnOpen.Enabled = false;
+                    btnClose.Enabled = true;
                 }
             }
         }
@@ -131,6 +141,7 @@ namespace Jin_s_4k_keypad_configurator
                         textboxKey2.Clear();
                         textboxKey3.Clear();
                         textboxKey4.Clear();
+                        btnflash.Enabled = false;
                     }
                 }
                 catch (Exception)
