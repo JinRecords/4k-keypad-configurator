@@ -1,7 +1,7 @@
 # The 4k-keypad manual
 
-Howdy, this is the official documentation for the 4k kaypad! Please note that the project is still in its early phase, 
-feedbacks are very much appreciated.
+Howdy, this is the official documentation for the 4k keypad! Please note that the project is still in its early phase, 
+feedback is very much appreciated.
 
 
 ### Index
@@ -14,7 +14,7 @@ feedbacks are very much appreciated.
 
 #### Quick Start Guide
 
-- Upon recieving the keypad, peel back the silver film located at the bottom of the keypad.
+- Upon receiving the keypad, peel back the silver film located at the bottom of the keypad.
 - Place the keypad firmly on a flat surface, apply pressure to the middle of the keypad to fix it in place.
 - Plug in the usb cable to the keypad and to your device.
 - See below for more customization!
@@ -27,7 +27,7 @@ To change mode, long press and release the Middle button after 0.5 seconds (you 
 ![middle button](https://raw.githubusercontent.com/JinRecords/4k-keypad-configurator/gh-pages/docs/assets/images/middle%20button.png)
 
 To change brightness, press and hold the middle button and tap/hold the 2 keys closest to the usb connector to change the brightness.
-Release middle key to apply the brightness.
+Release the middle key to apply the brightness.
 
 There are 7 Light modes:
 
@@ -59,25 +59,27 @@ There are 7 Light modes:
 - you can test your keys in the text box below the progress bar.
 
 The middle key is programmed to ```esc``` by default and cannot be changed.
-For more advance key combinations(or troubleshooting), click "console" and type 0 and enter; Follow the instruction listed there.
+For more advanced key combinations(or troubleshooting), click "console" and type 0 and enter; Follow the instructions listed there.
 
 
 ### Troubleshooting
 
-Q: The sticky pad aren't sticky anymore!   
+Q: The sticky pad isn't sticky anymore!   
 A: *Gently* peel the sticky pad from the bottom of the keypad, rinse it with clean water, let dry and place it back.
 
 Q: The LED lights are flickering!   
 A: Turn down the brightness.
 
 Q: I still can't find the correct com port!   
-A: Try unplug and plug in the keypad. If still can't detect brute force the com selection.
+A: Try unplugging and plugging in the keypad. If still can't detect brute force the com selection.
 
 Q: The keypad is not responding/lighting up!  
-A: Try a different usb port/cable.
+A: Try a different usb port/cable or reduce the brightness.
 
 Q: The keypad bottom came off!  
-A: Apply reasonable amount ofsuper glue/hot glue to the back side of the bottom panel and press it back into the main encosure.
+A: Apply a reasonable amount of super glue/hot glue to the back side of the bottom panel and press it back into the main enclosure.
 
 Q: The problems aren't listed above! / I still can't solve the problem listed above!  
 A: Contact the seller.
+
+
