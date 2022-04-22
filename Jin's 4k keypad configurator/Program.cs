@@ -13,7 +13,7 @@ namespace Jin_s_4k_keypad_configurator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new keypad());
         }
     }
 }
