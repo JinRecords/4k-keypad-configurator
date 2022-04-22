@@ -24,7 +24,7 @@ feedbacks are very much appreciated.
 
 To change mode, long press and release the Middle button after 0.5 seconds (you should see all the lights flicker once).
 
-![middle button](/docs/assets/images/middle%20button.png)
+![middle button](https://raw.githubusercontent.com/JinRecords/4k-keypad-configurator/gh-pages/docs/assets/images/middle%20button.png)
 
 To change brightness, press and hold the middle button and tap/hold the 2 keys closest to the usb connector to change the brightness.
 Release middle key to apply the brightness.
@@ -51,7 +51,7 @@ There are 7 Light modes:
 - Click "Connect".
 - Key in the keys in the config input boxes. (Use ```xx``` to blank a key)
 
-![Config input](/docs/assets/images/config%20input.png)
+![Config input](https://raw.githubusercontent.com/JinRecords/4k-keypad-configurator/gh-pages/docs/assets/images/config%20input.png)
 
 - Click "Flash!" when you're done.
 - Do NOT unplug the keypad during the remap process.
