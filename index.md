@@ -5,16 +5,68 @@ feedbacks are very much appreciated.
 
 
 ### Index
-- [Hardware](https://github.com/JinRecords/4k-keypad-configurator/edit/gh-pages/index.md?allow_unchanged=1#hardware)
-- [Software](https://github.com/JinRecords/4k-keypad-configurator/edit/gh-pages/index.md?allow_unchanged=1#software)
-- [Troubleshooting](https://github.com/JinRecords/4k-keypad-configurator/edit/gh-pages/index.md?allow_unchanged=1#troubleshooting)
+- [Hardware]()
+- [Software]()
+- [Troubleshooting]()
 
 
 ### Hardware
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Software
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Troubleshooting
+
+
+
+
+
+
+
+
+
+
+
 
