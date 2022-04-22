@@ -59,7 +59,7 @@ There are 7 Light modes:
 - you can test your keys in the text box below the progress bar.
 
 The middle key is programmed to ```esc``` by default and cannot be changed.
-For more advanced key combinations(or troubleshooting), click "console" and type 0 and enter; Follow the instructions listed there.
+For more advanced key combinations(or troubleshooting), click "console", type 0 and enter; Follow the instructions listed there.
 
 
 ### Troubleshooting
