@@ -47,7 +47,7 @@ There are 7 Light modes:
 [Download](https://github.com/JinRecords/4k-keypad-configurator/releases) it if you don't have it.
 
 #### Program the keys
-- Select device (look up in Control → Hardware and Sound → Devices and Printers → 4K Keypad → properties → Hardware → COM??).
+- Select device (look up in Control Panel → Hardware and Sound → Devices and Printers → 4K Keypad → properties → Hardware → COM??).
 - Click "Connect".
 - Key in the keys in the config input boxes. (Use ```xx``` to blank a key)
 
